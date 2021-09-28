@@ -4,6 +4,18 @@
         v-if="myQuestions[counter]"
         :class="{ 'site-card-collapse': collapsed }"
     >
+        <!-- Modal -->
+        <b-modal v-model="modalShow" hide-footer>
+            <div class="d-block text-center p-2">
+                Are you sure you want to start a new game?
+            </div>
+            <div class="d-flex justify-content-center pt-3">
+                <button @click="startNewGame()" type="button" class="btn btn-ok">
+                    Yes I'm
+                </button>
+            </div>
+        </b-modal>
+
         <span class="questions-count">
             {{ `( ${counter + 1} / ${myQuestions.length} )` }}
         </span>
@@ -47,7 +59,7 @@
                 Next
             </button>
         </div>
-        <button @click="startNewGame()" type="button" class="btn btn-bg capital-font new-game-btn">
+        <button @click="showModal()" type="button" class="btn btn-bg capital-font new-game-btn">
             new game
         </button>
     </div>
@@ -71,7 +83,8 @@ export default {
             itsTheLastQuestion: false,
             itsTheFirstQuestion: false,
             collapsed: true,
-            questionCollaps: false
+            questionCollaps: false,
+            modalShow: false
         };
     },
     computed: {
@@ -93,14 +106,19 @@ export default {
         }
     },
     methods: {
+        closeModal() {
+            this.modalShow = false;
+        },
+        showModal() {
+            this.modalShow = true;
+        },
         startNewGame() {
-            if (confirm("Are you sure you want to start a new game?")) {
-                this.collapsed = true;
-                setTimeout(() => {
-                    window.localStorage.clear();
-                    this.$router.push("/");
-                }, 400);
-            }
+            this.modalShow = false;
+            this.collapsed = true;
+            setTimeout(() => {
+                window.localStorage.clear();
+                this.$router.push("/");
+            }, 400);
         },
         nextQuestion() {
             if (this.questionCollaps === false) {
@@ -189,6 +207,10 @@ export default {
 </script>
 
 <style lang="scss">
+.modal-content,
+.modal-body {
+    color: #000000 !important;
+}
 .question-page.site-card {
     max-height: 700px;
 

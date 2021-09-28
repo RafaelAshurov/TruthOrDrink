@@ -4,6 +4,12 @@
             <div class="col-12 site-content">
                 <router-view />
             </div>
+            <div class="col-12 credits-row">
+                Developed with &#10084; by Rafael Ashurov <br />
+                <a href="https://www.playtruthordrink.com/" class="tod-link">
+                    &#174; Truth or drink
+                </a>
+            </div>
         </div>
     </div>
 </template>
@@ -14,10 +20,18 @@
     margin: 0 auto;
 
     .site-content {
-        padding: 50px 40px;
+        padding: 50px 40px 40px;
     }
     button.btn {
         box-shadow: none;
+    }
+    .credits-row {
+        color: #ffffff;
+
+        .tod-link {
+            font-size: 12px;
+            text-decoration: none;
+        }
     }
 }
 .alert.alert-danger.open-alert {

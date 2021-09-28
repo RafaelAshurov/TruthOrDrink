@@ -1,3 +1,8 @@
 module.exports = {
-    publicPath: ""
+    publicPath: "",
+    configureWebpack: {
+        output: {
+            filename: "[name].[hash].bundle.js"
+        }
+    }
 };

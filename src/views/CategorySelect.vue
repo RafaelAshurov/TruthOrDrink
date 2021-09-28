@@ -27,7 +27,7 @@
                 :class="noCategoriesAlert ? 'open-alert' : 'close-alert'"
                 role="alert"
             >
-                You have to chose atleast one category
+                You have to chose at least one category
             </div>
             <button @click="startNewGame()" type="button" class="btn btn-bg">
                 Start new game

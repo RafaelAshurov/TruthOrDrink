@@ -47,6 +47,7 @@ export default {
     padding-bottom: 50px;
     .start-game-logo-container {
         h1.site-logo {
+            color: #ffffff;
             font-weight: 600;
             border-radius: 50%;
             border: 3px solid #ffffff;
