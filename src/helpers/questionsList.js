@@ -52,7 +52,7 @@ export const QuestionList = [
     {
         "category": "chill",
         "en": "When was the last time you thought you might die? What made you feel that way?",
-        "heb": " כןןן כןכןכן כןכן"
+        "heb": "מתי הייתה הפעם האחרונה שהרגשתה כאילו אתה עומד למות, ומה קרה?"
     },
     {
         "category": "chill",
