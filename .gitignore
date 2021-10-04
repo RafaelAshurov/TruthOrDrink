@@ -22,3 +22,4 @@ yarn-error.log*
 
 #WebStorm files
 .history
+/src/helpers
