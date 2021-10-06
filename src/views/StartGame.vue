@@ -27,7 +27,7 @@ export default {
     methods: {
         moveToCategpries() {
             this.collapsed = true;
-            setTimeout(() => this.$router.push("/chose-your-categories"), 400);
+            setTimeout(() => this.$router.push("/add-players"), 400);
         }
     },
     created: function() {

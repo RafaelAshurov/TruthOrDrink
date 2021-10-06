@@ -57,7 +57,7 @@ export const QuestionList = [
     {
         "category": "chill",
         "en": "Do you think you are happier—or sadder—than the average person? Why?",
-        "heb": " כןןן כןכןכן כןכן"
+        "heb": " אתה חושב שאתה שמח יותר או עצוב יותר מכולם בממוצע? למה?"
     },
     {
         "category": "chill",
